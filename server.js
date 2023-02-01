@@ -25,3 +25,15 @@ mongoose.connect( process.env.db,{useNewUrlParser: true,useUnifiedTopology: true
   
     console.log('success online exam project ')})
     .catch((err)=>{console.log(err)})
+
+    app.get('/',(req,res)=>{
+        res.render('login')
+    })
+
+    //route for login 
+    const  admin_login=require('./controller/admin_login')
+    app.use(admin_login)
+
+    //route for login 
+    const  admin_dashboard=require('./controller/admin_dashboard')
+    app.use(admin_dashboard)

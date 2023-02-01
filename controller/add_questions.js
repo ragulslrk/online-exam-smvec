@@ -59,7 +59,7 @@ route.post('/add_question',(req,res)=>{
                         ]
                     })
                     new_question.save()
-                res.send('inserted succesfully1')
+                res.json('inserted succesfully1')
 
 
                 }

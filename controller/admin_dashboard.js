@@ -16,7 +16,7 @@ route.get('/dashboard/:token',(req,res)=>{
             
         }
         else{
-        res.send(req.params.token)
+        res.render('result')
 
         console.log(token);
 

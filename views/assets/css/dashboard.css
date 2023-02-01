@@ -2497,3 +2497,7 @@ footer.site-footer {
   margin-left: 20px;
   margin-right: 20px;
 }
+
+li{
+  list-style-type: none !important;
+}

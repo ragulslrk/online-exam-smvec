@@ -525,7 +525,7 @@ nav .profile-details i {
     margin-right: 20px;
 }
 
-.btn{
+.btn {
     padding: 20px 100px;
     margin-left: 20px;
     margin-right: 20px;
@@ -534,25 +534,73 @@ nav .profile-details i {
     color: white;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #073384;
 }
 
 
 
-.btn1{
+.btn1 {
     padding: 10px 30px;
     margin-left: 20px;
     margin-right: 20px;
     border-radius: 10px;
+    border-color: transparent;
     background-color: #073997;
     color: white;
 }
 
-.btn1:hover{
+.btn1:hover {
     background-color: #031434;
 }
 
-.ss{
-    
+
+
+ul {
+    list-style-type: none;
+}
+
+.boxss {
+    display: flex;
+    color: white;
+    padding: 15px 100px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.pagen {
+    color: rgb(0, 0, 0);
+    padding: 10px 25px;
+    height: fit-content;
+    width: 150px;
+    font-weight: 500;
+}
+
+.qn {
+    margin-top: 30px;
+    display: flex;
+    margin: 60px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+.qn span:hover {
+    background-color: #073384;
+    color: white;
+}
+
+.ans {
+    background-color: rgb(138, 255, 138) !important;
+    color: black;
+}
+
+.wrong {
+    background-color: rgb(255, 133, 133) !important;
+    color: black;
 }

@@ -37,3 +37,8 @@ mongoose.connect( process.env.db,{useNewUrlParser: true,useUnifiedTopology: true
     //route for login 
     const  admin_dashboard=require('./controller/admin_dashboard')
     app.use(admin_dashboard)
+
+
+    //route to add questions
+    const  add_question=require('./controller/add_questions')
+    app.use(add_question)

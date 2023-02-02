@@ -84,14 +84,7 @@
                 <div class="animated fadeIn">
     
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <strong>1. what is your name ?</strong> <small> </small>
-                                </div>
-    
-                            </div>
-                        </div>
+                       
                         <div class="col-xs-12 col-sm-12">
                             <div class="card">
                                 <div class="card-header">
@@ -99,10 +92,13 @@
                                 </div>
                                 <div class="card-body card-block">
                                     <div class="form-group">
+                                        <div id="msg">
+
+                                        </div>
                                         <label class=" form-control-label">Qustion</label>
                                         <div class="input-group">
                                             <div class="input-group-addon"><i class="bx bx-message-square-dots"></i></div>
-                                            <input class="form-control">
+                                            <input id="question" class="form-control" required>
                                         </div>
                                     </div>
                                     
@@ -110,27 +106,28 @@
                                         <ul style="width:40vw;margin:0px 30px ;font-weight: 600;">
                                             <br>
                                             <li>
-                                                <input type="radio" name="name" id="one" checked />
-                                                <label for="one"><input class="form-control" type="text"></label>
+                                                <input type="radio" name="option" value="A" />
+                                                <label for="one">
+                                                    <input class="form-control" type="text" id="optionA"></label>
                                                 
                                                 <div class="check"></div>
                                             </li>
                                             
                                             <li style="margin-top: 40px;">
-                                                <input type="radio" name="name" id="two" />
-                                                <label for="two"><input class="form-control" type="text"></label>
+                                                <input type="radio" name="option" value="B" />
+                                                <label for="two"><input class="form-control" type="text" id="optionB"></label>
                                                 
                                                 <div class="check"></div>
                                             </li>
                                             <li style="margin-top: 40px;">
-                                                <input type="radio" name="name" id="three" />
-                                                <label for="three"><input class="form-control" type="text"></label>
+                                                <input type="radio" name="option" value="C" />
+                                                <label for="three"><input class="form-control" type="text" id="optionC"></label>
                                                 
                                                 <div class="check"></div>
                                             </li>
                                             <li style="margin-top: 40px;">
-                                                <input type="radio" name="name" id="four" />
-                                                <label for="four"><input class="form-control" type="text"></label>
+                                                <input type="radio" name="option" value="D" />
+                                                <label for="four"><input class="form-control" type="text" id="optionD"></label>
                                                 
                                                 <div class="check"></div>
                                             </li>
@@ -138,7 +135,7 @@
                                         <br>
                                     </div>
                                     <br>
-                                    <button class="btn">Submit</button>
+                                    <button type="button" onclick="add_ques_b2()" class="btn btn-primary" >Submit</button>
                                 </div>
                             </div>
                         </div>
@@ -155,6 +152,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/customjs/add_question.js"></script>
+
 
 
     <script src="assets/js/lib/data-table/datatables.min.js"></script>

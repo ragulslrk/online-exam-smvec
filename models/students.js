@@ -12,8 +12,14 @@ const user_schema= mongoose.Schema({
     role:{
         type:String,
         required:false,
-        default:"admin"
+        default:"student"
+    },
+    batch:{
+        type:Number,
+        required:false,
+        default:0
     }
+
 },{versionKey:false})
 
 

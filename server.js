@@ -26,9 +26,23 @@ mongoose.connect( process.env.db,{useNewUrlParser: true,useUnifiedTopology: true
     console.log('success online exam project ')})
     .catch((err)=>{console.log(err)})
 
+    require("./passport/passport")()
+    app.use(session({
+        secret:'smvec',
+        resave:false,
+        saveUninitialized:true,
+        store: MongoStore.create({
+            mongoUrl:process.env.db
+        })
+    })) 
+    //passport 
+    app.use(passport.initialize())
+    app.use(passport.session())
+
     app.get('/',(req,res)=>{
-        res.render('login')
+        res.redirect('/login')
     })
+
 
     //route for login 
     const  admin_login=require('./controller/admin_login')
@@ -42,3 +56,22 @@ mongoose.connect( process.env.db,{useNewUrlParser: true,useUnifiedTopology: true
     //route to add questions
     const  add_question=require('./controller/add_questions')
     app.use(add_question)
+
+
+    //route  to login  user  
+    const  login_student=require("./controller/login")
+    app.use(login_student)
+
+     //route  to exam page  
+     const  exam=require("./controller/exam")
+     app.use(exam)
+ 
+
+    // route to get question 
+    const get_ques=require("./controller/get_questions")
+    app.use(get_ques)
+
+    //route to  calculate  the scores
+
+    const  cal_score=require('./controller/cal_score')
+    app.use(cal_score)

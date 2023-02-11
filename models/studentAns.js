@@ -1,5 +1,9 @@
 const mongoose  =require('mongoose')
 const answer_schema=mongoose.Schema({
+    username:{
+        type:String,
+        required:false
+    },
     batch:{
         required:false,
         type:Number
@@ -8,6 +12,7 @@ const answer_schema=mongoose.Schema({
 
         questionNo:Number,
         question:String,
+        q_id:String,
         given_ans:String,
         given_key:{
             type:String,
